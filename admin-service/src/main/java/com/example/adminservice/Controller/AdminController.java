@@ -51,7 +51,7 @@ public class AdminController {
         return adminService.getAllUnApprovedProducts();
     }
 
-
+// Admin Interaction with Customers
     @PatchMapping("/approveCustomer/{customerId}")
     public Customer updateCustomerStatus(@RequestBody boolean isApproved, @PathVariable String customerId){
         return adminService.updateCustomerStatus(isApproved, customerId);
